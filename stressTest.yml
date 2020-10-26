@@ -1,0 +1,16 @@
+config:
+    target: "http://localhost:4004"
+    phases:
+      - duration: 60
+        arrivalRate: 1
+        rampTo: 10
+        name: "warmup"
+      - duration: 60
+        arrivalRate: 10
+        rampTo: 100
+        name: "mid-tier"
+scenarios:
+     - name: "GET hotels"
+       flow:
+        - get:
+            url: "/9999996"
