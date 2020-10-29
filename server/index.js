@@ -71,7 +71,7 @@ app.get('/hotel/:hotel', (req, res) => {
   let hotel = req.params.hotel === 'root'? 'hotel0': req.params.hotel;
   axios({
     method: "GET",
-    url: `http://localhost:4003/hotel/${hotel}`
+    url: `http://3.139.18.79:4003/hotel/${hotel}`
   })
   .then((results) => {
     res.send(results.data)
